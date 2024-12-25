@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Music List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Liste des musiques -->
+  <ion-list>
+    <ion-item *ngFor="let music of musicList">
+      <ion-label>
+        <h2>{{ music.title }}</h2>
+        <p>{{ music.artist }}</p>
+        <small>{{ music.url }}</small>
+      </ion-label>
+      <ion-button slot="end" color="tertiary" [routerLink]="['/edit-music', music.id]">
+        Edit
+      </ion-button>
+      <!-- Bouton pour supprimer une musique -->
+      <ion-button slot="end" color="danger" (click)="deleteMusic(music.id)">
+        Delete
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Bouton pour ajouter une nouvelle musique -->
+  <ion-button routerLink="/add-music" expand="full" color="primary">
+    Add New Music
+  </ion-button>
+  <ion-button expand="full" color="primary" [routerLink]="'/photos'">
+    Go to Photos
+  </ion-button>
+</ion-content>

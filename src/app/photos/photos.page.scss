@@ -1,0 +1,16 @@
+ion-button {
+  display: block;
+  margin: 10px auto; /* Centrage horizontal et espacement */
+  padding: 10px 20px; /* Taille interne */
+  width: auto; /* Largeur automatique */
+  max-width: 200px; /* Largeur maximale */
+  border-radius: 25px; /* Coins arrondis */
+}
+
+
+ion-fab-button {
+  --background: #f44336; /* Couleur rouge pour le bouton fab */
+  --color: #ffffff; /* Couleur du texte ou icône */
+  border-radius: 50%; /* Bouton rond */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre */
+}

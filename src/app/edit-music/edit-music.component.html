@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Music</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <!-- Formulaire pour modifier une musique -->
+      <form (ngSubmit)="saveChanges()">
+        <!-- Champ pour le titre de la musique -->
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="updatedMusic.title" name="title"></ion-input>
+        </ion-item>
+
+        <!-- Champ pour l'artiste -->
+        <ion-item>
+          <ion-label position="stacked">Artist</ion-label>
+          <ion-input [(ngModel)]="updatedMusic.artist" name="artist"></ion-input>
+        </ion-item>
+
+        <!-- Bouton pour enregistrer les modifications -->
+        <ion-button expand="full" type="submit" color="primary">
+          Save Changes
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
